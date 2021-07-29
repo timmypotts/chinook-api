@@ -18,6 +18,7 @@ app.use(bp.urlencoded({ extended: true }));
 app.use(cors());
 
 // Routes
+require("./routes/actors-routes")(app);
 
 db.sequelize.sync({ force: false }).then(function () {
   app.listen(PORT, function () {
