@@ -2,8 +2,9 @@ const express = require("express");
 const path = require("path");
 const bp = require("body-parser");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 require("dotenv").config();
+// logger
+morgan = require("morgan");
 
 // Set up express app
 app = express();
@@ -16,12 +17,14 @@ var db = require("./models");
 app.use(bp.json());
 app.use(bp.urlencoded({ extended: true }));
 app.use(cors());
+app.use(morgan("dev"));
 
 // Routes
-require("./routes/actors-routes")(app);
+require("./routes/actor-routes")(app);
+require("./routes/film-routes")(app);
 
-db.sequelize.sync({ force: false }).then(function () {
-  app.listen(PORT, function () {
+db.sequelize.authenticate().then(() => {
+  app.listen(PORT, () => {
     console.log("App listening on PORT :: " + PORT);
   });
 });

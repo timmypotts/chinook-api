@@ -1,6 +1,6 @@
-const { violet } = require("color-name");
 const db = require("../models");
 const vetString = require("./vetters/vetString");
+
 module.exports = actorMiddleware = {
   checkDuplicates: (req, res, next) => {
     // This first checks to see if there are any numbers in the input and corrects capitalization
