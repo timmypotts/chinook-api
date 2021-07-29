@@ -56,6 +56,8 @@ REGARDING THE VIDEO RECORDING: I have not used a lot of screen recording softwar
 
 If I were to implement this API in a production environment, I would obviously use more secure methods. Namely, not having my database URL exposed on github. I would use a .env file, or dockerize the application and push env variables in during the build/deployment phase.
 
+The database is hosted on the same EC2 instance as the API, I just made a docker container and migrated the data using the psql cli. The data is mounted as a volume so if the container crashes, I can just spin up another container and the data will still be there.
+
 Speaking of production, I would have certainly constructed a CI/CD pipeline instead of pulling the git repo down and starting the application manually. You can see an example of one of my pipelines [here](https://github.com/timmypotts/package-tracker/blob/master/.circleci/config.yml).
 
 I had a lot of fun building this little project; thank you for the opportunity.
