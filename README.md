@@ -2,7 +2,7 @@
 
 This is a fairly basic API that interacts with a postgreSQL database.
 
-# Searching Actors:
+## Searching Actors:
 
 There are multiple ways to interact with the vast list of actors.
 
@@ -10,15 +10,15 @@ To return all of the actors, simply sned a GET request to /api/actors
 
 There are three optional queries you can add to your request to refine results.
 
-# name=
+### name=
 
 This allows you to search through the list by name. It is not case-sensative and will return all actors whose names contain your query.
 
-# page=
+### page=
 
 Each page contians 20 actors. A query for 2 pages will return 40 actors, a query for 4 pages will return 80 actors.
 
-# order=
+### order=
 
 This will choose which column the results will be ordered by. The default setting is by the id column, but you may specify any column you like.
 
