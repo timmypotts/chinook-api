@@ -15,6 +15,8 @@ module.exports = function (app) {
 
   // ==================Handles READ (get) requests ====================================================================
 
+  app.get("/api/films", filmController.getFilms);
+
   // Fetches all actors that appeared in a film
   app.get("/api/films/:id/actors", filmController.getActors);
 };

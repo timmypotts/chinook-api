@@ -42,4 +42,15 @@ module.exports = filmController = {
       res.status(200).json(results);
     }
   },
+
+  getFilms: async (req, res) => {
+    return db.films
+      .findAll({})
+      .then((films) => {
+        res.status(200).json(films);
+      })
+      .catch((err) => {
+        res.status(500);
+      });
+  },
 };
