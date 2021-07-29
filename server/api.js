@@ -8,7 +8,7 @@ morgan = require("morgan");
 
 // Set up express app
 app = express();
-var PORT = 3080;
+var PORT = 80;
 
 // Requiring our models for syncing
 var db = require("./models");
