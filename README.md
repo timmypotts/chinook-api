@@ -31,3 +31,11 @@ You may also find all films of an actor if you have their id. This can by done w
 ### POST requests
 
 You may add an actor to the database if one does not already exist. This can be done with a `POST` request to `api/actors` with a body in the format of `{firstname: leroy, lastname: jenkins}`.
+
+### PUT requests
+
+You may update an actor's first name, last name, or both with their id. The body format is the same as for the `POST` method, but you must include their id at the end i.e. `/api/actors/:id`.
+
+### Delete requests
+
+This will delete an actor using their id. Simply make a call with the `DELETE` method and iclude their id in the request url.
