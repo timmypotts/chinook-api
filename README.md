@@ -1,6 +1,6 @@
 # Chinook Api
 
-This is an API that interacts with a postgreSQL database.
+This is an API that interacts with a postgreSQL database. The base URL is `http://crud.timpotts.xyz/api`. From there you may add queries to interact with that database.
 
 ## Actors
 
