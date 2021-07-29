@@ -1,6 +1,10 @@
 # Chinook Api
 
-This is an API that interacts with a postgreSQL database. The base URL is `http://crud.timpotts.xyz/api`. From there you may add queries to interact with that database.
+This is a Node/Express API that interacts with a postgreSQL database. The base URL is `http://crud.timpotts.xyz/api`. From there you may add queries to interact with that database.
+
+## Installation
+
+To get started, clone the git repo and set up a database using the .sql file in the root directory. Then cd into the server directory and hit `npm i`, followed by `npm start`.
 
 ## Actors
 
