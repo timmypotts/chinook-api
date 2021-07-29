@@ -2,6 +2,7 @@ const db = require("../models");
 const vetString = require("./vetters/vetString");
 
 module.exports = filmMiddleware = {
+  // check for duplicates
   filmActorDup: (req, res, next) => {
     let checkFilm = vetInt(req.params.filmid);
     let checkAct = vetInt(req.params.actorid);

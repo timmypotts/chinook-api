@@ -1,6 +1,6 @@
 # chinook-api
 
-This is a fairly basic API that interacts with a postgreSQL database.
+This is an API that interacts with a postgreSQL database.
 
 ## Actors
 
@@ -39,3 +39,19 @@ You may update an actor's first name, last name, or both with their id. The body
 ### DELETE requests
 
 This will delete an actor using their id. Simply make a call with the `DELETE` method and iclude their id in the request url.
+
+## Films
+
+### POST requests
+
+You can create an association between an actor and a film in the film_actor junction table with the `POST` route `/api/films/film=:filmid/actor=:actorid`.
+
+### GET request
+
+You can `GET` a list of all films with `/api/films`. You may also find a list of all actors that appear in a given film with the film id using `/api/films/:id/actors`.
+
+## Thoughts
+
+REGARDING THE VIDEO RECORDING: I have not used a lot of screen recording software, so I just downloaded on from the ubuntu software store and started on the coding assignment. There was a pause and a stop option. I figured that pause would do just that, but apparently everything recorded prior to hitting pause was lost. On top of this, for my last recording, I had unplugged and plugged back in my headset, but the software did not automatically switch to the input source, so there is no audio. I apologize for the inconvenience.
+
+If I were to implement this API in a production environment, I would obviously use more secure methods. Namely, not having my database URL exposed on github. I would use a .env file, or dockerize the application and push env variables in during the build/deployment phase.
