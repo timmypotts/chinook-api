@@ -1,0 +1,17 @@
+deploy:
+  docker:
+    - image: circleci/python:3.8
+  steps:
+    - add_ssh_keys:
+        fingerprints: 96:88:a2:b6:2f:d1:48:d5:ef:52:2d:70:9b:42:86:a0
+    - run:
+        name: fix host authenticity for production server
+        command: ssh-keyscan $ELASTIC >> ~/.ssh/known_hosts
+    - run:
+        name: deploy to remote server
+        command: |
+          echo "Initiated"
+          ssh ubuntu@$ELASTIC "\
+            git clone 
+
+          echo "Deployment Successful"

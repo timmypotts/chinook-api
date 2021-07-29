@@ -1,6 +1,6 @@
 {
   "development": {
-    "use_env_variable": "DEV_URL"
+    "use_env_variable": "postgresql://job:123123@localhost:5432/chinook"
   },
   "test": {
     "username": "root",
